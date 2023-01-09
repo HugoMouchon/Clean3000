@@ -1,0 +1,20 @@
+@use '../../sass/colors.scss' as c;
+
+.header {
+    display: flex;
+    align-items: center;
+
+    .logo {
+        width: 20rem;
+    }
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    background-color: c.$bg-default-color;
+    height: 100vh;
+}
