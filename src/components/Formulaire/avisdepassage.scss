@@ -14,8 +14,30 @@
     height: 100vh;
 
     .avisdepassage {
-        display: flex;
-        align-items: center;
-        height: 50%;
+        width: 100%;
     }
+
+    .sous-titre {
+        text-align: center;
+        padding-bottom: 5rem;
+
+        h2 {
+            text-transform: uppercase;
+            margin: 0;
+        }
+    }
+
+    .signatures {
+        display: flex;
+        text-align: center;
+    }
+
+    .btnSubmit {
+        display: flex;
+        justify-content: center;
+        padding-top: 8rem;
+    }
+
 }
+
+
