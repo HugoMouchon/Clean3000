@@ -34,13 +34,13 @@
         .observation {
             display: flex;
             flex-direction: column;
-            text-align: center;
 
 
             .form {
                 margin: 0;
                 text-transform: uppercase;
                 font-size: 2rem;
+                font-weight: bold;
 
                 .input {
                     padding: 10rem;
@@ -67,7 +67,17 @@
                 margin: 1rem;
                 color: #fff;
                 background-color: c.$bg-list-entreprises-color;
+
+                p {
+                    font-weight: bold;
+                }
             }
+        }
+
+        .signatures {
+            justify-content: space-between;
+            padding: 1rem;
+            gap: 5rem
         }
 
         .btnSubmit {

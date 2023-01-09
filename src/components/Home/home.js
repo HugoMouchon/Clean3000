@@ -25,9 +25,9 @@ function Home() {
                     </div>
                 </section>
 
-                <div className='logoSVG'>
+                {/* <div className='logoSVG'>
                     <img src={logoSVG} alt="" />
-                </div>
+                </div> */}
             </body>
         </html>
     );

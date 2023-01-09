@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 
 const Avisdepassage = () => {
+
   // Créer un état pour stocker les valeurs du formulaire
   const [formData, setFormData] = useState({
     entreprise: '',
@@ -15,7 +16,7 @@ const Avisdepassage = () => {
   })
 
   // Créer un état pour stocker les entrées soumises
-  const [listpassages, setEntries] = useState([]);
+  const [listpassages, setListpassages] = useState([]);
 
   // Fonction pour mettre à jour l'état lorsque le formulaire est modifié
   const handleChange = (event) => {
@@ -28,11 +29,12 @@ const Avisdepassage = () => {
   // Fonction pour soumettre le formulaire
   const handleSubmit = (event) => {
     event.preventDefault()
-    // Traitement des données soumises ici
+
+    // Controle dans la console que les informations se stocks bien dans le tableau
     console.log(formData)
 
-    // Ajouter l'entrée soumise au tableau d'entrées
-    setEntries([...listpassages, formData]);
+    // Le setState de la liste des avis de passage
+    setListpassages([...listpassages, formData]);
 
     // Réinitialisation de l'état du formulaire
     setFormData({
@@ -79,6 +81,11 @@ const Avisdepassage = () => {
                     className='input' />
                 </label>
                 <span>Merci de votre confiance</span>
+              </div>
+
+              <div className='signatures'>
+                  <span>Signature du technicien</span>
+                  <span>Signature du client</span>
               </div>
 
               {/* Bouton de soumission */}

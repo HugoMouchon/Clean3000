@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     height: 15vh;
-    background-color: rgb(6, 80, 6);
+    background-color: c.$bg-header-color;
 
         img {
             width: 15rem;
@@ -13,10 +13,7 @@
 }
 
 .container {
-    display: flex;
-    justify-content: center;
     background-color: c.$bg-default-color;
-    position: relative;
 
     .accueil {
         display: flex;
@@ -46,12 +43,5 @@
                     background-color: c.$bg-btn-hover-color;
                 }
         }
-    }
-
-    .logoSVG {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 0;
     }
 }
