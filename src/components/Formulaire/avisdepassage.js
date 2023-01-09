@@ -2,59 +2,9 @@ import React, { useState } from 'react'
 import '../../sass/App.scss';
 import './avisdepassage.scss'
 import '../Home/home.scss';
-import logo from '../../img/logo-clean3000.png';
+import logo from '../../img/logo-clean3000-transparent.png';
 import { Link } from 'react-router-dom';
-import { Button, Form, Input, InputNumber } from 'antd';
-
-
-// const Avisdepassage = () => {
-//   return (
-//     <html>
-//       <header className='header'>
-//         <Link to="/">
-//           <img className='logo' src={logo} alt="loggo de l'entreprise Clean 3000" />
-//         </Link>
-//       </header>
-//       <body className='container'>
-//         <section className='avisdepassage'>
-
-//             <Form.Item className='form'
-//               label="Nom entreprise/ou client"
-//               name={['entreprise', 'nom']}
-//             >
-//               <Input />
-//             </Form.Item>
-
-//             <Form.Item
-//               label="Notre technicien est intervenu pour l'entretien de la vitrerie le"
-//               name={['date', 'date']}
-//             >
-//               <InputNumber />
-//             </Form.Item>
-
-//             <div className='sous-titre'>
-//               <h2>observations</h2>
-//               <span>Merci de votre confiance</span>
-//             </div>
-
-//             <div className='signatures'>
-//               <span>Signature du technicien</span>
-//               <span>Signature du client/Cachet de l'entreprise</span>
-//             </div>
-
-//             <div className='btnSubmit'>
-//               <Button type="primary" htmlType="submit">
-//                 Enregistrer
-//               </Button>
-//             </div>
-
-//         </section>
-//       </body>
-//     </html>
-//   )
-// }
-
-// export default Avisdepassage
+import { Button, Form, Input } from 'antd';
 
 const Avisdepassage = () => {
   // Créer un état pour stocker les valeurs du formulaire
@@ -76,40 +26,47 @@ const Avisdepassage = () => {
     event.preventDefault()
     // Traitement des données soumises ici
     console.log(formData)
+
+    // Réinitialisation de l'état du formulaire
+    setFormData({
+      entreprise: '',
+      date: ''
+    })
   }
 
   return (
     <html>
-//       <header className='header'>
-//         <Link to="/">
-//           <img className='logo' src={logo} alt="loggo de l'entreprise Clean 3000" />
-//         </Link>
-//       </header>
+      <header className='header'>
+        <Link to="/">
+          <img className='logo' src={logo} alt="loggo de l'entreprise Clean 3000" />
+        </Link>
+      </header>
       <body className='container'>
         <section className='avisdepassage'>
 
           {/* Formulaire */}
           <form onSubmit={handleSubmit}>
-            <Form.Item
-              label="Nom entreprise/ou client"
-              name='entreprise'
-            >
-              <Input onChange={handleChange} />
-            </Form.Item>
+            <div >
+              <label className='form'>
+                Nom de l'entreprise ou du client
+                <input type="text" name="entreprise" onChange={handleChange} className='input' />
+              </label>
+            </div>
 
             {/* Bouton de soumission */}
             <div className='btnSubmit'>
-              <Button type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit" className='btn'>
                 Enregistrer
               </Button>
             </div>
           </form>
 
           {/* Affichage des données soumises */}
-          <div>
+          <div className='listentreprises'>
             <p>Nom entreprise/client: {formData.entreprise}</p>
             <p>Date: {formData.date}</p>
           </div>
+
         </section>
       </body>
     </html>

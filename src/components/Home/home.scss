@@ -3,11 +3,12 @@
 .header {
     display: flex;
     justify-content: center;
-    height: 30vh;
-    background-color: c.$bg-header-color;
+    align-items: center;
+    height: 15vh;
+    background-color: rgb(6, 80, 6);
 
         img {
-            height: 100%;
+            width: 15rem;
         }
 }
 
@@ -15,11 +16,30 @@
     display: flex;
     justify-content: center;
     background-color: c.$bg-default-color;
-    height: 100vh;
+    position: relative;
 
     .accueil {
         display: flex;
         align-items: center;
         height: 50%;
+
+        .btn {
+            padding: 0 5rem;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: c.$bg-btn-color;
+
+                &:hover {
+                    background-color: c.$bg-btn-hover-color;
+                }
+        }
+    }
+
+    .logoSVG {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
     }
 }

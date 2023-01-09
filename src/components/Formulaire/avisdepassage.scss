@@ -1,12 +1,5 @@
 @use '../../sass/colors.scss' as c;
 
-.header {
-    display: flex;
-    justify-content: center;
-    height: 30vh;
-    background-color: c.$bg-header-color;
-}
-
 .container {
     display: flex;
     justify-content: center;
@@ -14,7 +7,23 @@
     height: 100vh;
 
     .avisdepassage {
-        width: 100%;
+        border: 2px solid #fff;
+        border-radius: 1rem;
+        padding: 5rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+        text-align: center;
+
+        .input {
+            padding: 1rem;
+            border: 1px solid #fff;
+            border-radius: 1rem;
+        }
     }
 
     .sous-titre {
@@ -32,12 +41,25 @@
         text-align: center;
     }
 
+    .listentreprises {
+        text-align: center;
+    }
+
     .btnSubmit {
         display: flex;
         justify-content: center;
         padding-top: 8rem;
+
+        .btn {
+            padding: 0 5rem;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: c.$bg-btn-color;
+
+            &:hover {
+                background-color: c.$bg-btn-hover-color;
+            }
+        }
     }
-
 }
-
-
