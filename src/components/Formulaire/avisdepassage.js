@@ -10,6 +10,7 @@ const Avisdepassage = () => {
   // Créer un état pour stocker les valeurs du formulaire
   const [formData, setFormData] = useState({
     entreprise: '',
+    observation: '',
     date: Date.now()
   })
 
@@ -30,6 +31,7 @@ const Avisdepassage = () => {
     // Réinitialisation de l'état du formulaire
     setFormData({
       entreprise: '',
+      observation: '',
       date: ''
     })
   }
@@ -53,6 +55,14 @@ const Avisdepassage = () => {
               </label>
             </div>
 
+            <div className='observation'>
+              <label className='form'>
+                Observations
+                <input type="text" name="observation" onChange={handleChange} className='input' />
+              </label>
+              <span>Merci de votre confiance</span>
+            </div>
+
             {/* Bouton de soumission */}
             <div className='btnSubmit'>
               <Button type="primary" htmlType="submit" className='btn'>
@@ -64,6 +74,7 @@ const Avisdepassage = () => {
           {/* Affichage des données soumises */}
           <div className='listentreprises'>
             <p>Nom entreprise/client: {formData.entreprise}</p>
+            <p>observations: {formData.observation}</p>
             <p>Date: {formData.date}</p>
           </div>
 

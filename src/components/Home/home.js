@@ -17,9 +17,12 @@ function Home() {
 
             <body className='container'>
                 <section className='accueil'>
-                    <Link to="/avisdepassage">
-                        <Button className='btn'>Commencer</Button>
-                    </Link>
+                    <div className='title-btn'>
+                        <h1>Pour plus de propreté, Optez pour CLEAN 3000 !</h1>
+                        <Link to="/avisdepassage">
+                            <Button className='btn'>Commencer</Button>
+                        </Link>
+                    </div>
                 </section>
 
                 <div className='logoSVG'>

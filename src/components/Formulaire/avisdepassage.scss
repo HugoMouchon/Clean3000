@@ -6,12 +6,6 @@
     background-color: c.$bg-default-color;
     height: 100vh;
 
-    .avisdepassage {
-        border: 2px solid #fff;
-        border-radius: 1rem;
-        padding: 5rem;
-    }
-
     .form {
         display: flex;
         flex-direction: column;
@@ -26,13 +20,26 @@
         }
     }
 
-    .sous-titre {
+    .observation {
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        padding-bottom: 5rem;
 
-        h2 {
-            text-transform: uppercase;
+
+        .form {
             margin: 0;
+            text-transform: uppercase;
+            font-size: 2rem;
+
+            .input {
+                padding: 10rem;
+                border: 1px solid #fff;
+                border-radius: 1rem;
+            }
+        }
+
+        span {
+            font-size: 1.5rem;
         }
     }
 
@@ -48,7 +55,7 @@
     .btnSubmit {
         display: flex;
         justify-content: center;
-        padding-top: 8rem;
+        padding-top: 3rem;
 
         .btn {
             padding: 0 5rem;
