@@ -5,10 +5,6 @@
     justify-content: center;
     height: 30vh;
     background-color: c.$bg-header-color;
-
-        img {
-            height: 100%;
-        }
 }
 
 .container {
@@ -17,7 +13,7 @@
     background-color: c.$bg-default-color;
     height: 100vh;
 
-    .accueil {
+    .avisdepassage {
         display: flex;
         align-items: center;
         height: 50%;
