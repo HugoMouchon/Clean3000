@@ -6,66 +6,78 @@
     background-color: c.$bg-default-color;
     height: 100vh;
 
-    .form {
+    .avisdepassage {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        padding-top: 1rem;
+        gap: 10rem;
         text-align: center;
-
-        .input {
-            padding: 1rem;
-            border: 1px solid #fff;
-            border-radius: 1rem;
-        }
-    }
-
-    .observation {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-
 
         .form {
-            margin: 0;
-            text-transform: uppercase;
-            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-top: 1rem;
+            text-align: center;
 
             .input {
-                padding: 10rem;
+                padding: 1rem;
                 border: 1px solid #fff;
                 border-radius: 1rem;
             }
         }
 
-        span {
-            font-size: 1.5rem;
+        .observation {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+
+            .form {
+                margin: 0;
+                text-transform: uppercase;
+                font-size: 2rem;
+
+                .input {
+                    padding: 10rem;
+                    border: 1px solid #fff;
+                    border-radius: 1rem;
+                }
+            }
+
+            span {
+                font-size: 1.5rem;
+            }
         }
-    }
 
-    .signatures {
-        display: flex;
-        text-align: center;
-    }
+        .signatures {
+            display: flex;
+            text-align: center;
+        }
 
-    .listentreprises {
-        text-align: center;
-    }
+        .listentreprises {
+            text-align: center;
 
-    .btnSubmit {
-        display: flex;
-        justify-content: center;
-        padding-top: 3rem;
+            .entreprise {
+                padding: 1rem;
+                color: #fff;
+                background-color: c.$bg-list-entreprises-color;
+            }
+        }
 
-        .btn {
-            padding: 0 5rem;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-            color: #fff;
-            background-color: c.$bg-btn-color;
+        .btnSubmit {
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
 
-            &:hover {
-                background-color: c.$bg-btn-hover-color;
+            .btn {
+                padding: 0 5rem;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                color: #fff;
+                background-color: c.$bg-btn-color;
+
+                &:hover {
+                    background-color: c.$bg-btn-hover-color;
+                }
             }
         }
     }

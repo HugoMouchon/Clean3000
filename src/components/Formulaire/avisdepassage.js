@@ -15,7 +15,7 @@ const Avisdepassage = () => {
   })
 
   // Créer un état pour stocker les entrées soumises
-  const [entries, setEntries] = useState([]);
+  const [listpassages, setEntries] = useState([]);
 
   // Fonction pour mettre à jour l'état lorsque le formulaire est modifié
   const handleChange = (event) => {
@@ -32,7 +32,7 @@ const Avisdepassage = () => {
     console.log(formData)
 
     // Ajouter l'entrée soumise au tableau d'entrées
-    setEntries([...entries, formData]);
+    setEntries([...listpassages, formData]);
 
     // Réinitialisation de l'état du formulaire
     setFormData({
@@ -50,51 +50,57 @@ const Avisdepassage = () => {
         </Link>
       </header>
       <body className='container'>
+
         <section className='avisdepassage'>
 
-          {/* Formulaire */}
-          <form onSubmit={handleSubmit}>
-            <div >
-              <label className='form'>
-                Nom de l'entreprise ou du client
-                <input
-                  type="text"
-                  name="entreprise"
-                  onChange={handleChange}
-                  className='input' />
-              </label>
-            </div>
+          <div>
+            <h2>Formulaire à remplir</h2>
 
-            <div className='observation'>
-              <label className='form'>
-                Observations
-                <input
-                  type="text"
-                  name="observation"
-                  onChange={handleChange}
-                  className='input' />
-              </label>
-              <span>Merci de votre confiance</span>
-            </div>
+            {/* Formulaire */}
+            <form onSubmit={handleSubmit}>
+              <div >
+                <label className='form'>
+                  Nom de l'entreprise ou du client
+                  <input
+                    type="text"
+                    name="entreprise"
+                    onChange={handleChange}
+                    className='input' />
+                </label>
+              </div>
 
-            {/* Bouton de soumission */}
-            <div className='btnSubmit'>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className='btn'>
-                Enregistrer
-              </Button>
-            </div>
-          </form>
+              <div className='observation'>
+                <label className='form'>
+                  Observations
+                  <input
+                    type="text"
+                    name="observation"
+                    onChange={handleChange}
+                    className='input' />
+                </label>
+                <span>Merci de votre confiance</span>
+              </div>
+
+              {/* Bouton de soumission */}
+              <div className='btnSubmit'>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className='btn'>
+                  Enregistrer
+                </Button>
+              </div>
+            </form>
+          </div>
 
           {/* Affichage des données soumises */}
           <div className='listentreprises'>
-            {entries.map((entry, index) => (
-              <div key={index}>
-                <p>Nom entreprise/client: {entry.entreprise}</p>
-                <p>observations: {entry.observation}</p>
-                <p>Date: {entry.date}</p>
+            <h2>Listes des avis de passage</h2>
+            {listpassages.map((passage, index) => (
+              <div key={index} className='entreprise'>
+                <p>Nom entreprise/client: {passage.entreprise}</p>
+                <p>observations: {passage.observation}</p>
+                <p>Date: {passage.date}</p>
               </div>
             ))}
           </div>
